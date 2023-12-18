@@ -1,0 +1,43 @@
+<!-- your_template.html -->
+
+
+  <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h2 {text-align: center;}
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    
+    table.center,h2 {
+      margin-left: auto; 
+      margin-right: auto;
+    }
+    </style>
+    </head>
+    <body>
+    
+    
+    
+    
+    <table class="center">
+        <h2 >Staff Attendance</h2>
+      <tr>
+      <th>Name</th>
+    <th>Login Time</th> 
+     <th>Logout Time</th>
+    </tr>
+    <tr>
+        {% for data in firebase_data %}
+            <th scope="row"></th>
+             <tr>  <td>{{ data.Name }}  </td> <!-- Display fields from Firebase data -->
+                   <td>{{ data.Login_Time }}</td>
+                   <td>{{ data.logout_time }}</td></tr> 
+
+            {% endfor %}
+    
+    
+    </table>
+    

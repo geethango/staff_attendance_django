@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    
+    <ul class="center">
+        {% for item in firebase_data %}
+          
+           
+            <li>
+              
+              {% if item.Login_Time %}
+              <h1  >{{ item.Name }}  entered the  class at {{item.Login_Time}} </h1>
+              {% if item.logout_time %}
+              <h1  >{{ item.Name }}  leaved the  class at {{item.logout_time}} </h1>
+              {% endif %}   
+              {% endif %}
+          </li>
+            
+            
+        {% endfor %}
+    </ul>
+</body>
+</html>

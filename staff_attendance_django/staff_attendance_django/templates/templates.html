@@ -1,0 +1,16 @@
+<!-- your_template.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firebase Data in Django</title>
+</head>
+<body>
+    <h1>Firebase Data</h1>
+    <ul>
+        {% for data in firebase_data %}
+            <li>{{ data.field_name }}</li> <!-- Display fields from Firebase data -->
+        {% endfor %}
+    </ul>
+</body>
+</html>
